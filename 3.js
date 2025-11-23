@@ -43,16 +43,20 @@ showQuestion()
 }
 function showQuestion(){
     resetState()   // this is for removing the previous childs or buttons
+    // soumyadeeps change
+    // this is the part where we sets the question and this is important 
     let currentQuestion=questions[currentQuestionIndex]
     let questionNo=currentQuestionIndex+1;  //added 1 for 1 based indexing
-    questionElement.innerHTML=questionNo+". "+currentQuestion.question
+    questionElement.innerHTML=questionNo+". "+currentQuestion.question//here you basically selects the arrays objects first question 
     
-    //for each objects question part we show the question along with the serial no.
+    //now
 
     currentQuestion.answers.forEach(answer => {
         const button=document.createElement("button");
+        //create a button for every answer and add it into the ans-buttons which we have created in the html tag
         button.innerHTML=answer.text;
         button.classList.add("btn");
+        //here you gonna se that you added the child
         ansButton.appendChild(button);
         //above this we created child for every ans of objects created 
         //and after that added into the class list
